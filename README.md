@@ -39,7 +39,7 @@ The basic procedure to generate the PHQ item #9 quality assurance analysis is as
 6. Review /LOCAL/SRPM_PHQ9_QA_SITE.log for errors.
 7. If log file is clean, review /SHARE/SRPM_PHQ9_QA_SITE.pdf to better understand the availability of PHQ item #9 data for your SRPM denominator.
 
-**Table 1. PHQ9_CESR_PRO data dictionary (for sites that have not implemented CESR PRO data model)**
+**Table 1. PHQ9_CESR_PRO data dictionary**
 
 Name | Type | Description
 --- | --- | ---

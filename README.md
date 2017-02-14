@@ -15,14 +15,15 @@ In addition to this README, the srpm-phq9-qa repository contains the following m
     * **Purpose:** PHQ item #9 asks, "Over the last two weeks, how often have you been bothered by thoughts that you would be better off dead, or of hurting yourself in some way?" A patient's response to item #9 is an especially important predictor of suicide risk. As such, this program assesses the availability of PHQ item #9 data for the VDW-based denominator of mental health–related outpatient clinic visits (identified in step 1 above). The program addresses the following questions:
 	    1. How many person-dates are associated with multiple qualifying VDW encounters?
 		2. How are VDW encounters being matched to PHQ item #9 scores?
-    * **Input SAS data sets:** 
-	    * SRPM_DENOM_FULL_SITE.sas7bdat
+    * **Dependencies:** 
+		* StdVars.sas
+		* Local modifications in introductory edit section
+	    * Available SRPM denominator data set, SRPM_DENOM_FULL_SITE.sas7bdat
             * This data set should have been produced by SRPM_DENOM.sas and stored in the accompanying /LOCAL subdirectory. More information available in the [MHResearchNetwork/sprm-denom](https://github.com/MHResearchNetwork/srpm-denom) repository.
 		    * Note: SITE = local site abbreviation as implemented in VDW StdVars &_siteabbr macro variable
-		* PHQ9_CESR_PRO.sas7bdat
+		* Available PHQ-9 data set, PHQ9_CESR_PRO.sas7bdat
 		    * This data set must be created from local PHQ-9 item-level response data and stored in a location accessible to the program.
             * The required data elements, shown below in Table 1, represent a simplified version of the Kaiser Permanente CESR data model PRO_SURVEY_RESPONSES table (PRO = Patient Reported Outcomes). 
-    * **Other dependencies:** StdVars.sas; local modifications in introductory edit section
     * **Output files:**
         * /LOCAL/SRPM_PHQ9_QA_SITE.log – SAS log file
         * /SHARE/SRPM_PHQ9_QA_SITE.pdf – Table for local review. Small cell sizes suppressed per local implementation of VDW StdVars &lowest_count macro variable.
